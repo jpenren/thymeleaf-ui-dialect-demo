@@ -1,0 +1,34 @@
+#mycard {
+	width: 40em;
+}
+
+#mycarousel {
+	width: 40em;
+}
+
+pre {
+	font-size: 60%;
+	border: 1px dashed #ddd;
+}
+
+.component-example {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+    padding: 1em;	
+}
+
+.sidebar-nav img {
+	width: 36px;
+	height: 36px;
+}
+.sidebar-nav ul{
+	list-style: none;
+	margin-left: -35px;
+}
+.sidebar-nav ul li.active{
+    background-color: #007bff;
+}
+.sidebar-nav ul li.active a{
+	color: #fff;
+	padding: .5em;
+}

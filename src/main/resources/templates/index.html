@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:ui="http://www.thymeleaf.org/ui">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+    
+    <title>Demo application</title>
+  </head>
+  <body>
+  
+    <div class="container-fluid">
+    
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Alert</h3>
+          <div ui:render="${@demoAlert}"></div>
+          
+          <div id="myalertfromhtml" class="alert alert-danger" ui:render="${alert1}"></div>
+          <p>Alert collection</p>
+          <div th:each="alert:${alerts}" ui:render="${alert}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Badge</h3>
+          <span ui:render="${badge}"></span>
+          <span class="badge badge-pill badge-primary" ui:render="${badge2}"></span>
+          <span ui:render="${badge3}"></span>
+          <span ui:render="${badge4}"></span>
+        </div>
+      </div>
+        
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Breadcrumb</h3>
+          <nav ui:render="${breadcrumb}"></nav>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Button</h3>
+          <p>
+            <button ui:render="${button}"></button>
+            <button class="btn btn-danger" ui:render="${button}"></button>
+            <button class="btn btn-outline-primary" ui:render="${button}"></button>
+          </p>
+          <p>
+            <button ui:render="${buttonDisabled}"></button>
+            <button ui:render="${buttontoggle}"></button>
+            <button ui:render="${buttonActive}"></button>
+          </p>
+          <p>
+            <button class="btn btn-primary btn-lg" ui:render="${button}"></button>
+            <button ui:render="${buttonlg}"></button>
+            <button class="btn btn-primary btn-sm" ui:render="${button}"></button>
+          </p>
+          <p>
+            <button ui:render="${buttonlink}"></button>
+          </p>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Button group</h3>
+          <div ui:render="${buttonGroup}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Card</h3>
+          <div ui:render="${simpleCard}"></div>
+          <p></p>
+          <div ui:render="${card}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Carousel</h3>
+          <nav ui:render="${carousel}"></nav>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Dropdown</h3>
+          <div ui:render="${dropdown}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Figure</h3>
+          <div ui:render="${figure}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Navigation</h3>
+          <div>
+            <ul ui:render="${navigation}"></ul>
+            <ul class="nav nav-pills nav-fill" ui:render="${navigation}"></ul>
+          </div>
+          <div>
+            <ul ui:render="${@navBean}"></ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Navigation header</h3>
+          <div class="navbar navbar-expand-lg navbar-light bg-light" ui:render="${@navbar}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Sidebar</h3>
+          <div ui:render="${@sidebar}"></div>
+        </div>
+      </div>
+      
+      <div class="row component-example">
+        <div class="col-sm-6">
+          <!-- examples -->
+          <h3>Custom component</h3>
+          <div ui:render="${customComponent}"></div>
+        </div>
+      </div>
+      
+    </div><!-- container -->
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}" ></script>
+    <script th:src="@{/webjars/popper.js/1.14.1/umd/popper.min.js}" ></script>
+    <script th:src="@{/webjars/bootstrap/4.1.1/js/bootstrap.min.js}" ></script>
+  </body>
+</html>
